@@ -19,16 +19,22 @@ from rpc_api.api.attestation_api import AttestationApi
 from rpc_api.api.geo_api import GeoApi
 from rpc_api.api.simuler_api import SimulerApi
 from rpc_api.api.trajet_api import TrajetApi
+
 # import ApiClient
 from rpc_api.api_client import ApiClient
 from rpc_api.configuration import Configuration
+
 # import models into sdk package
 from rpc_api.models.certificate_data import CertificateData
 from rpc_api.models.certificate_data_total import CertificateDataTotal
 from rpc_api.models.certificate_data_trips import CertificateDataTrips
 from rpc_api.models.certificates_body import CertificatesBody
-from rpc_api.models.certificatesuuidattachment_meta import CertificatesuuidattachmentMeta
-from rpc_api.models.certificatesuuidattachment_meta_identity import CertificatesuuidattachmentMetaIdentity
+from rpc_api.models.certificatesuuidattachment_meta import (
+    CertificatesuuidattachmentMeta,
+)
+from rpc_api.models.certificatesuuidattachment_meta_identity import (
+    CertificatesuuidattachmentMetaIdentity,
+)
 from rpc_api.models.distance import Distance
 from rpc_api.models.driver import Driver
 from rpc_api.models.duration import Duration
@@ -52,7 +58,9 @@ from rpc_api.models.inline_response201 import InlineResponse201
 from rpc_api.models.inline_response2011 import InlineResponse2011
 from rpc_api.models.inline_response201_meta import InlineResponse201Meta
 from rpc_api.models.journeys_body import JourneysBody
-from rpc_api.models.journeys_operator_journey_id_body import JourneysOperatorJourneyIdBody
+from rpc_api.models.journeys_operator_journey_id_body import (
+    JourneysOperatorJourneyIdBody,
+)
 from rpc_api.models.lat import Lat
 from rpc_api.models.licence_plate import LicencePlate
 from rpc_api.models.limit import Limit
@@ -73,3 +81,5 @@ from rpc_api.models.status import Status
 from rpc_api.models.time_geopoint import TimeGeopoint
 from rpc_api.models.total import Total
 from rpc_api.models.uuid_attachment_body import UuidAttachmentBody
+
+from rpc_api.helpers import cee_identity_key
