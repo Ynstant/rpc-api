@@ -17,9 +17,9 @@ Python 2.7 and 3.4+
 If the python package is hosted on Github, you can install directly from Github
 
 ```sh
-pip install git+https://github.com/GIT_USER_ID/GIT_REPO_ID.git
+pip install git+https://github.com/Ynstant/rpc_api.git
 ```
-(you may need to run `pip` with root permission: `sudo pip install git+https://github.com/GIT_USER_ID/GIT_REPO_ID.git`)
+(you may need to run `pip` with root permission: `sudo pip install git+https://github.com/Ynstant/rpc-api.git`)
 
 Then import the package:
 ```python
@@ -107,20 +107,20 @@ except ApiException as e:
 
 All URIs are relative to *https://api.covoiturage.beta.gouv.fr/v3*
 
-Class | Method | HTTP request | Description
------------- | ------------- | ------------- | -------------
-*AttestationApi* | [**certificate_create**](docs/AttestationApi.md#certificate_create) | **POST** /certificates | Créer un certificat
-*AttestationApi* | [**certificate_download**](docs/AttestationApi.md#certificate_download) | **POST** /certificates/{uuid}/attachment | Télécharger une attestation
-*AttestationApi* | [**certificate_verify**](docs/AttestationApi.md#certificate_verify) | **GET** /certificates/{uuid} | Vérifier un certificat
-*GeoApi* | [**geo_point_by_address_get**](docs/GeoApi.md#geo_point_by_address_get) | **GET** /geo/point/by_address | Geocoding à partir d&#x27;une adresse litérale
-*GeoApi* | [**geo_point_by_insee_get**](docs/GeoApi.md#geo_point_by_insee_get) | **GET** /geo/point/by_insee | Geocoding à partir d&#x27;un code insee
-*GeoApi* | [**geo_route_get**](docs/GeoApi.md#geo_route_get) | **GET** /geo/route | Calcul théorique de la distance et de la durée
-*SimulerApi* | [**policies_simulate_post**](docs/SimulerApi.md#policies_simulate_post) | **POST** /policies/simulate | Simuler une incitation sur un trajet
-*TrajetApi* | [**acquisition_cancel**](docs/TrajetApi.md#acquisition_cancel) | **POST** /journeys/{operator_journey_id}/cancel | Invalider un trajet envoyé
-*TrajetApi* | [**acquisition_create**](docs/TrajetApi.md#acquisition_create) | **POST** /journeys | Envoyer un trajet
-*TrajetApi* | [**acquisition_status**](docs/TrajetApi.md#acquisition_status) | **GET** /journeys/{operator_journey_id} | Vérifier le statut d&#x27;un trajet envoyé
-*TrajetApi* | [**acquisition_update**](docs/TrajetApi.md#acquisition_update) | **PATCH** /journeys/{operator_journey_id} | Mettre à jour un trajet
-*TrajetApi* | [**journeys_get**](docs/TrajetApi.md#journeys_get) | **GET** /journeys | Liste des trajets
+| Class            | Method                                                                  | HTTP request                                    | Description                                    |
+| ---------------- | ----------------------------------------------------------------------- | ----------------------------------------------- | ---------------------------------------------- |
+| *AttestationApi* | [**certificate_create**](docs/AttestationApi.md#certificate_create)     | **POST** /certificates                          | Créer un certificat                            |
+| *AttestationApi* | [**certificate_download**](docs/AttestationApi.md#certificate_download) | **POST** /certificates/{uuid}/attachment        | Télécharger une attestation                    |
+| *AttestationApi* | [**certificate_verify**](docs/AttestationApi.md#certificate_verify)     | **GET** /certificates/{uuid}                    | Vérifier un certificat                         |
+| *GeoApi*         | [**geo_point_by_address_get**](docs/GeoApi.md#geo_point_by_address_get) | **GET** /geo/point/by_address                   | Geocoding à partir d&#x27;une adresse litérale |
+| *GeoApi*         | [**geo_point_by_insee_get**](docs/GeoApi.md#geo_point_by_insee_get)     | **GET** /geo/point/by_insee                     | Geocoding à partir d&#x27;un code insee        |
+| *GeoApi*         | [**geo_route_get**](docs/GeoApi.md#geo_route_get)                       | **GET** /geo/route                              | Calcul théorique de la distance et de la durée |
+| *SimulerApi*     | [**policies_simulate_post**](docs/SimulerApi.md#policies_simulate_post) | **POST** /policies/simulate                     | Simuler une incitation sur un trajet           |
+| *TrajetApi*      | [**acquisition_cancel**](docs/TrajetApi.md#acquisition_cancel)          | **POST** /journeys/{operator_journey_id}/cancel | Invalider un trajet envoyé                     |
+| *TrajetApi*      | [**acquisition_create**](docs/TrajetApi.md#acquisition_create)          | **POST** /journeys                              | Envoyer un trajet                              |
+| *TrajetApi*      | [**acquisition_status**](docs/TrajetApi.md#acquisition_status)          | **GET** /journeys/{operator_journey_id}         | Vérifier le statut d&#x27;un trajet envoyé     |
+| *TrajetApi*      | [**acquisition_update**](docs/TrajetApi.md#acquisition_update)          | **PATCH** /journeys/{operator_journey_id}       | Mettre à jour un trajet                        |
+| *TrajetApi*      | [**journeys_get**](docs/TrajetApi.md#journeys_get)                      | **GET** /journeys                               | Liste des trajets                              |
 
 ## Documentation For Models
 
