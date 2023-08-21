@@ -19,6 +19,11 @@ import rpc_api
 from rpc_api.rest import ApiException
 from pprint import pprint
 
+# Configure API key authorization: token
+configuration = rpc_api.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = rpc_api.SimulerApi(rpc_api.ApiClient(configuration))
