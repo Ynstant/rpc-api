@@ -82,4 +82,4 @@ from rpc_api.models.time_geopoint import TimeGeopoint
 from rpc_api.models.total import Total
 from rpc_api.models.uuid_attachment_body import UuidAttachmentBody
 
-from rpc_api.helpers import cee_identity_key
+from rpc_api.helpers import identity_key, user_identity
