@@ -1,12 +1,13 @@
 import re
 from hashlib import sha256
 
-import rpc_api
-from pydantic import BaseSettings
+from rpc_api.models.identity import Identity
+from rpc_api.models.identity_travel_pass import IdentityTravelPass
+from typing import Optional
 from unidecode import unidecode
 
 
-def cee_identity_key(cls, phone_number: str, last_name: str):
+def identity_key(phone_number: str, last_name: str) -> str:
     def process_last_name(name: str):
         # Capitalize name
         capitalized_name = name.upper()
@@ -27,3 +28,18 @@ def cee_identity_key(cls, phone_number: str, last_name: str):
     processed_last_name = process_last_name(last_name)
 
     return sha256(f"{phone_number}-{processed_last_name}".encode("utf-8")).hexdigest()
+
+
+def user_identity(
+    phone: str,
+    last_name: str,
+    operator_user_id: str,
+    travel_pass: Optional[IdentityTravelPass] = None,
+    over_18: Optional[bool] = None,
+) -> Identity:
+    return Identity(
+        identity_key=identity_key(phone_number=phone, last_name=last_name),
+        operator_user_id=operator_user_id,
+        travel_pass=travel_pass,
+        over_18=over_18,
+    )
